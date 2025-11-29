@@ -28,7 +28,7 @@ namespace TestAssignment
         {
             return salaryAmount * 1.302;
         }
-        public override int GetAge(DateTime birth) // переопределение метода класса-родителя - определение возраста
+        public int GetAge(DateTime birth) // переопределение метода класса-родителя - определение возраста
         {
             return base.GetAge(birth);
         }
@@ -36,12 +36,9 @@ namespace TestAssignment
         {
             return DateTime.Today.Year - startDateOfWorkExperiencee.Year - 1 + ((DateTime.Today.Month > startDateOfWorkExperiencee.Month || DateTime.Today.Month == startDateOfWorkExperiencee.Month && DateTime.Today.Day >= startDateOfWorkExperiencee.Day) ? 1 : 0);
         }
-        public void PrintAdministrator()
-        {
-            Console.WriteLine("\nДанные администратора: \nФамилия - {0} \nДата рождения - {1} \nЛаборатория - {2} \nДолжность - {3} \nДата начала трудового стажа - {4} \nРазмер оклада - {5}", surname, birth, laboratory, post, startDateOfWorkExperiencee, salaryAmount);
-        }
         public void Turn()
         {
+            Console.WriteLine("\nДанные администратора: \nФамилия - {0} \nДата рождения - {1} \nЛаборатория - {2} \nДолжность - {3} \nДата начала трудового стажа - {4} \nРазмер оклада - {5}", surname, birth, laboratory, post, startDateOfWorkExperiencee, salaryAmount);
             Console.WriteLine("Класс, моделирующий сущность");
             base.Show();
         }

@@ -23,8 +23,9 @@ namespace TestAssignment
         }
         public Student() // конструктор по умолчанию
         { }
-        public int Scholarship(double averageScore, out int answer) // расчет стипендии
+        public int Scholarship(double averageScore) // расчет стипендии
         {
+            int answer = 0;
             if (4.5 <= averageScore && averageScore <= 5)
             {
                 answer = 10000;
@@ -39,16 +40,13 @@ namespace TestAssignment
             } 
                 return answer;
         }
-        public override int GetAge(DateTime birth) // определение возраста
+        public int GetAge(DateTime birth) // определение возраста
         {
             return base.GetAge(birth);
         }
-        public void PrintStudent()
-        {
-            Console.WriteLine("\nДанные студента: \nФамилия - {0} \nДата рождения - {1} \nФакультет - {2} \nГруппа - {3} \nСредняя оценка - {4}", surname, birth, faculty, group, averageScore);
-        }
         public void Turn()
         {
+            Console.WriteLine("\nДанные студента: \nФамилия - {0} \nДата рождения - {1} \nФакультет - {2} \nГруппа - {3} \nСредняя оценка - {4}", surname, birth, faculty, group, averageScore);
             Console.WriteLine("Класс, моделирующий сущность");
             base.Show();
         }

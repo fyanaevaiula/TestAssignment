@@ -13,9 +13,8 @@ namespace TestAssignment
             string g = "ИС123";
             double a = 3.56;
             Student st = new Student(s, b, f, g, a); // передача элементов конструктору
-            st.PrintStudent();
             st.Turn();
-            int area0 = st.Scholarship(a, out area0);
+            int area0 = st.Scholarship(a);
             Console.WriteLine("Стипендия студента в месяц, руб. = " + area0);
             int area1 = st.GetAge(b);
             Console.WriteLine("Возраст студента: " + area1);
@@ -27,7 +26,6 @@ namespace TestAssignment
             DateTime sd1 = DateTime.Parse("1 Jan 1990 00:00:00");
             double sa1 = 80000.0;
             Teacher ta = new Teacher(s1, b1, f1, p1, sd1, sa1); // передача элементов конструктору
-            ta.PrintTeacher();
             ta.Turn();
             double area2 = ta.Wages(sa1);
             Console.WriteLine("Заработная плата преподавателя в месяц, руб. = " + area2);
@@ -43,7 +41,6 @@ namespace TestAssignment
             DateTime sd2 = DateTime.Parse("9 Jan 1991 00:00:00");
             double sa2 = 50000.0;
             Manager ma = new Manager(s2, b2, f2, p2, sd2, sa2); // передача элементов конструктору
-            ma.PrintManager();
             ma.Turn();
             double area5 = ma.Wages(sa2);
             Console.WriteLine("Заработная плата менеджера в месяц, руб. = " + area5);
@@ -59,7 +56,6 @@ namespace TestAssignment
             DateTime sd3 = DateTime.Parse("9 Jan 2018 00:00:00"); ;
             double sa3 = 45000.0;
             Administrator mg = new Administrator(s3, b3, f3, p3, sd3, sa3); // передача элементов конструктору
-            mg.PrintAdministrator();
             mg.Turn();
             double area8 = mg.Wages(sa3);
             Console.WriteLine("Заработная плата администратора в месяц, руб. = " + area8);

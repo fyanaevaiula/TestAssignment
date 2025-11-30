@@ -28,10 +28,8 @@ namespace TestAssignment
         {
             return salaryAmount * 1.302;
         }
-        public int GetAge(DateTime birth) // определение возраста
-        {
-            return base.GetAge(birth);
-        }
+        // определение возраста - метод базового класса не переопределяется, поэтому
+        // для определения возраста используется метод базового класса Person.GetAge()
         public int WorkExperience(DateTime startDateOfWorkExperiencee) // определение стажа
         {
             return DateTime.Today.Year - startDateOfWorkExperiencee.Year - 1 + ((DateTime.Today.Month > startDateOfWorkExperiencee.Month || DateTime.Today.Month == startDateOfWorkExperiencee.Month && DateTime.Today.Day >= startDateOfWorkExperiencee.Day) ? 1 : 0);

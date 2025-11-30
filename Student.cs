@@ -40,10 +40,8 @@ namespace TestAssignment
             } 
                 return answer;
         }
-        public int GetAge(DateTime birth) // определение возраста
-        {
-            return base.GetAge(birth);
-        }
+        // определение возраста - метод базового класса не переопределяется, поэтому
+        // для определения возраста используется метод базового класса Person.GetAge()
         public void Turn()
         {
             Console.WriteLine("\nДанные студента: \nФамилия - {0} \nДата рождения - {1} \nФакультет - {2} \nГруппа - {3} \nСредняя оценка - {4}", surname, birth, faculty, group, averageScore);
